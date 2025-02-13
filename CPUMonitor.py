@@ -1,6 +1,20 @@
 import psutil
 import time
 
+"""
+Monitors CPU usage and raises an alert if it exceeds a defined threshold.
+
+- Continuously checks CPU usage percentage at 1-second intervals.
+- Alerts when CPU usage exceeds the specified threshold (default: 80%).
+- Runs indefinitely until manually stopped by the user.
+
+Args:
+    threshold (int): The CPU usage percentage threshold for triggering an alert.
+
+Returns:
+    None
+"""
+
 # Define the CPU usage threshold
 CPU_THRESHOLD = 80
 
