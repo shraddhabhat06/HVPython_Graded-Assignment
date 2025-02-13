@@ -3,6 +3,24 @@ import json
 import os
 from flask import Flask, jsonify
 
+"""
+    Reads, parses, and serves configuration data from an INI file using Flask.
+
+    - Reads a configuration file (`config.ini`) using `configparser`.
+    - Stores the parsed configuration data in a global dictionary.
+    - Displays the configuration in a readable format.
+    - Provides an API endpoint (`/config`) to return the configuration as JSON.
+    - Starts a Flask server to serve configuration data.
+
+    Args:
+        file_path (str): The path to the configuration file.
+
+    Returns:
+        dict: Parsed configuration data with section names as keys 
+              and corresponding key-value pairs as values.
+"""
+
+
 # Flask App
 app = Flask(__name__)
 
